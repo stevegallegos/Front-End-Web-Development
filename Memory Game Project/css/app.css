@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff url('../img/mountainImage.jpg');
+  /* Background img from wallpapervortex.com */
+  font-family: 'Orbitron', cursive;
+  color: white;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+.deck {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #314755 0%, #96DEDA 100%);
+  padding: 32px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+  border-radius: 10px;
+}
+
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #F3A183;
+  font-size: 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #434343;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 50px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #3c4f65;
+  font-size: 50px;
+}
+
+.deck .card.disable {
+  pointer-events: none;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+.score-panel {
+  text-align: left;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
